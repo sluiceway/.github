@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sluiceway/sluiceway/05403b5ab026c6a7c98837bd6dc08881dbbd0273/assets/mascot/in-sync-dark.svg">
-    <img alt="Sluiceway: Penny, the sluice gate, asleep because everything is in sync" src="https://raw.githubusercontent.com/sluiceway/sluiceway/05403b5ab026c6a7c98837bd6dc08881dbbd0273/assets/mascot/in-sync-light.svg" width="440">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sluiceway/sluiceway/6eb8d045673dbd32fe37d71ea941d59e1cb04675/assets/mascot/in-sync-dark.svg">
+    <img alt="Sluiceway: Penny, the sluice gate, asleep on the quay because everything is in sync" src="https://raw.githubusercontent.com/sluiceway/sluiceway/6eb8d045673dbd32fe37d71ea941d59e1cb04675/assets/mascot/in-sync-light.svg" width="880">
   </picture>
 </p>
 
@@ -16,6 +16,8 @@ After a merge, Sluiceway previews every infrastructure stack in your repo and ke
 
 A sluiceway is a channel with a gate. Changes queue up behind the gate, and you decide what passes. The gate is called Penny.
 
-### Status
+### Status: beta
 
-Sluiceway is being built in the open and is not usable yet. The plan, the decisions and the progress are all in [sluiceway/sluiceway](https://github.com/sluiceway/sluiceway): start with the [README](https://github.com/sluiceway/sluiceway#readme), the [build plan](https://github.com/sluiceway/sluiceway/blob/main/docs/build-plan.md) and the [decision records](https://github.com/sluiceway/sluiceway/tree/main/docs/adr). Watch the repo's releases to hear when the first version lands.
+Sluiceway works end to end. It runs on a real repo with 51 stacks: every push updates the dashboard, and a tick deploys that stack and nothing else. There is no tagged release yet, so for now you pin a commit. Expect rough edges, and tell us about every one you hit: the [onboarding log](https://github.com/sluiceway/sluiceway/blob/main/docs/onboarding-log.md) is where they go.
+
+Start with the [README](https://github.com/sluiceway/sluiceway#readme). The [decision records](https://github.com/sluiceway/sluiceway/tree/main/docs/adr) say why it works the way it does, and [what is not in v1](https://github.com/sluiceway/sluiceway/blob/main/docs/later.md) says what comes after.
