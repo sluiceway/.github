@@ -12,12 +12,12 @@ After a merge, Sluiceway previews every infrastructure stack in your repo and ke
 - **It is a GitHub Action and nothing else.** No server, no database, no hosted part.
 - **It never holds your credentials.** Previews and deploys run in your own runners, with your own secrets.
 - **The issue is a view, never the source of truth.** Before every deploy the stack is previewed again, and nothing happens unless the fresh preview still matches what you ticked.
-- **Pulumi first.** The core is tool-neutral, so OpenTofu and Terraform can follow.
+- **It reads the tools you already use.** Pulumi, OpenTofu and Terraform, also behind Terragrunt or CDK for Terraform, Helm releases and Kubernetes manifests. One dashboard, whatever a stack is built with.
 
 A sluiceway is a channel with a gate. Changes queue up behind the gate, and you decide what passes. The gate is called Penny.
 
 ### Status: beta
 
-Sluiceway works end to end. It runs on a real repo with 51 stacks: every push updates the dashboard, and a tick deploys that stack and nothing else. There is no tagged release yet, so for now you pin a commit. Expect rough edges, and tell us about every one you hit: the [onboarding log](https://github.com/sluiceway/sluiceway/blob/main/docs/onboarding-log.md) is where they go.
+Sluiceway works end to end. It runs on a real repo with more than 50 stacks: every push updates the dashboard, a tick deploys that stack and nothing else, a Renovate update can be merged and deployed from the same box, and a scheduled scan reports drift. It is released as 0.x, so use `sluiceway/sluiceway@v0`, or pin a commit to review every update yourself. Expect rough edges, and tell us about every one you hit: the [onboarding log](https://docs.sluiceway.dev/onboarding-log/) is where they go.
 
-Start with the [README](https://github.com/sluiceway/sluiceway#readme). The [decision records](https://github.com/sluiceway/sluiceway/tree/main/docs/adr) say why it works the way it does, and [what is not in v1](https://github.com/sluiceway/sluiceway/blob/main/docs/later.md) says what comes after.
+Start at [sluiceway.dev](https://sluiceway.dev), or go straight to the [docs](https://docs.sluiceway.dev). The [decision records](https://docs.sluiceway.dev/why/) say why it works the way it does, and [what is not in v1](https://docs.sluiceway.dev/not-in-v1/) says what comes after.
